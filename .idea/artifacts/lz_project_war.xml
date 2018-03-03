@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lz_project:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="anothertravel-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="lz_project:war exploded" />
+    </root>
+  </artifact>
+</component>
