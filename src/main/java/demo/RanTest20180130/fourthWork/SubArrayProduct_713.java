@@ -9,7 +9,7 @@ package demo.RanTest20180130.fourthWork;
  * Output: 8
  *       疑惑：每次头尾移动算个数 end-start+1？
  *       手演了一遍  对于框的每次移动，相当于要加上是新加入的子数组的个数 比如框内两个元素（end=2，start=1，新加入的就是第二个元素和两个元素组成的数组），以此类推
- *       这个方法主要得益于 找连续的子集
+ *       这个方法主要得益于 找连续的子集 没错
  */
 public class SubArrayProduct_713 {
 
