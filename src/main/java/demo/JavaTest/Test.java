@@ -12,10 +12,10 @@ public class Test {
 
     }
 
-    static class A{
+    static class A {
         protected int value;
-        public A(int v)
-        {
+
+        public A(int v) {
             setValue(v);
         }
 
@@ -23,7 +23,7 @@ public class Test {
             try {
                 value++;
                 return value;
-            }finally {
+            } finally {
                 this.setValue(value);
                 System.out.println(value);
             }
@@ -34,17 +34,15 @@ public class Test {
         }
     }
 
-    static class B extends A
-    {
-        public B()
-        {
+    static class B extends A {
+        public B() {
             super(5);
-            setValue(getValue()-3);
+            setValue(getValue() - 3);
         }
+
         @Override
-        public void setValue(int value)
-        {
-            super.setValue(2*value);
+        public void setValue(int value) {
+            super.setValue(2 * value);
         }
     }
 }
