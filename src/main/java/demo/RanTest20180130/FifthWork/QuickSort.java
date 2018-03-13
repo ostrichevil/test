@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @author li
  * @date 20180312
  * @des 快速排序
- *      思路：以一个数为基准，左边放比其小的，右边放比其大的 时间复杂度 o(nlogn) 最坏情况 o(n2)
+ * 思路：以一个数为基准，左边放比其小的，右边放比其大的 时间复杂度 o(nlogn) 最坏情况 o(n2)
  */
 public class QuickSort {
 
