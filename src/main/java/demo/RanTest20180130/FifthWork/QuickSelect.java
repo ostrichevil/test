@@ -32,7 +32,7 @@ public class QuickSelect {
     }
 
     public static int quickSelect(int[] arr, int rank, int low, int high) {
-        if (low == high) {
+        if (low >= high) {
             return arr[low];
         }
         int index = getIndex(arr, low, high);
@@ -48,6 +48,6 @@ public class QuickSelect {
     public static void main(String[] args) {
         QuickSelect quickSelect =new QuickSelect();
         int[] arr = {1, 5, 3, 9, 7, 4, 2};
-        System.out.println(quickSelect.getAtRank(arr,4));
+        System.out.println(quickSelect.getAtRank(arr,5));
     }
 }
