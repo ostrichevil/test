@@ -32,9 +32,6 @@ public class QuickSelect {
     }
 
     public static int quickSelect(int[] arr, int rank, int low, int high) {
-        if (low >= high) {
-            return arr[low];
-        }
         int index = getIndex(arr, low, high);
         if (index - low + 1 == rank) {
             return arr[index];
