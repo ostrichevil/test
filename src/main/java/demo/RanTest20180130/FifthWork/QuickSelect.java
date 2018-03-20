@@ -12,7 +12,7 @@ package demo.RanTest20180130.FifthWork;
 public class QuickSelect {
 
     public int getAtRank(int[] arr, int rank) {
-        return quickSelect(arr, rank, 0, arr.length - 1);
+        return quickSelect2(arr, rank, 0, arr.length - 1);
     }
 
     public static int getIndex(int[] arr, int low, int high) {
@@ -42,9 +42,20 @@ public class QuickSelect {
         }
     }
 
+    public static int quickSelect2(int[] arr, int rank, int low, int high) {
+        int index = getIndex(arr, low, high);
+        if (index - low + 1 == rank) {
+            return arr[index];
+        } else if (high - index + 1 > rank) {
+            return quickSelect(arr, high - index + 1 - rank, index + 1, high);
+        } else {
+            return quickSelect(arr, 2 * index - low - high + rank, low, index - 1);
+        }
+    }
+
     public static void main(String[] args) {
-        QuickSelect quickSelect =new QuickSelect();
+        QuickSelect quickSelect = new QuickSelect();
         int[] arr = {1, 5, 3, 9, 7, 4, 2};
-        System.out.println(quickSelect.getAtRank(arr,5));
+        System.out.println(quickSelect.getAtRank(arr, 5));
     }
 }
