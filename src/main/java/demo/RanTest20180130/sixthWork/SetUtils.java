@@ -14,32 +14,38 @@ public class SetUtils {
 
     public static Set<String> union(Set<String> s1, Set<String> s2) {
         Set<String> unionSet = new HashSet<String>();
-        for (String s : s1) {
-            unionSet.add(s);
-        }
-        for (String s : s2) {
-            unionSet.add(s);
-        }
+//        for (String s : s1) {
+//            unionSet.add(s);
+//        }
+//        for (String s : s2) {
+//            unionSet.add(s);
+//        }
+        unionSet.addAll(s1);
+        unionSet.addAll(s2);
         return unionSet;
     }
 
     public static Set<String> intersect(Set<String> s1, Set<String> s2) {
         Set<String> intersectSet = new HashSet<String>();
-        for (String s : s1) {
-            if (s2.contains(s)) {
-                intersectSet.add(s);
-            }
-        }
+//        for (String s : s1) {
+//            if (s2.contains(s)) {
+//                intersectSet.add(s);
+//            }
+//        }
+        intersectSet.addAll(s1);
+        intersectSet.retainAll(s2);
         return intersectSet;
     }
 
     public static Set<String> subtract(Set<String> s1, Set<String> s2) {
         Set<String> subtractSet = new HashSet<String>();
-        for (String s : s1) {
-            if (!s2.contains(s)) {
-                subtractSet.add(s);
-            }
-        }
+//        for (String s : s1) {
+//            if (!s2.contains(s)) {
+//                subtractSet.add(s);
+//            }
+//        }
+        subtractSet.addAll(s1);
+        subtractSet.removeAll(s2);
         return subtractSet;
     }
 
